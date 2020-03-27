@@ -1,0 +1,8 @@
+---
+- name: Check ansible ver on ubuntu hosts
+  hosts: ubuntu
+  tasks: 
+    - name: Using an apt command
+      command: "ansible --version"
+      register: result
+    - debug: var=result   
